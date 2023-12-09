@@ -12,16 +12,15 @@ namespace money_problem.Tests
         {
             double? result = MoneyCalculator.Add(5, USD, 10);
             result.Should()
-                .NotBeNull();
+                .Be(15);
         }
         
         [Fact(DisplayName = "10 EUR x 2 = 20 EUR")]
         public void MultiplyInEuros()
         {
-            MoneyCalculator
-                .Times(10, EUR, 2)
-                .Should()
-                .Be(20d);
+            MoneyCalculator.Times(10, EUR, 2)
+                           .Should()
+                           .Be(20d);
         }
 
         [Fact(DisplayName = "4002 KRW / 4 = 1000.5 KRW")]
