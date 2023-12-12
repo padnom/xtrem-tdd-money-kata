@@ -23,7 +23,7 @@ namespace money_problem.Tests
                            .Be(20d);
         }
 
-        [Fact(DisplayName = "4002 KRW / 4 = 1000.5 KRW")]
+        [Fact(DisplayName = "5 USD + 10 EUR = 1000.5 KRW")]
         public void DivideInKoreanWons()
         {
             MoneyCalculator
@@ -31,5 +31,25 @@ namespace money_problem.Tests
                 .Should()
                 .Be(1000.5d);
         }
+        
+        [Fact(DisplayName = "5 USD + 10 EUR = 17 USD")]
+        public void AddInUsdAndEuro()
+        {
+            double? result = MoneyCalculator.Add(5, USD, 10);
+            result.Should()
+                  .Be(17);
+        
+        }
+
+        [Theory]
+        [InlineData(1, 2, 3)]
+        [InlineData(1, 2, 3)]
+        public void shouydl(int a, int b, int c)
+        {
+            
+        }
+
+
+        
     }
 }
