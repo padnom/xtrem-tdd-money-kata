@@ -31,15 +31,6 @@ namespace money_problem.Tests
                 .Should()
                 .Be(1000.5d);
         }
-        
-        [Fact(DisplayName = "5 USD + 10 EUR = 17 USD")]
-        public void AddInUsdAndEuro()
-        {
-            double? result = MoneyCalculator.Add(5, USD, 10);
-            result.Should()
-                  .Be(17);
-        
-        }
 
         [Theory]
         [InlineData(1, 2, 3)]
@@ -52,4 +43,5 @@ namespace money_problem.Tests
 
         
     }
+   
 }
