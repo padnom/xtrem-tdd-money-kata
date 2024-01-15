@@ -26,10 +26,9 @@ namespace money_problem.Tests
         [Fact(DisplayName = "5 USD + 10 EUR = 1000.5 KRW")]
         public void DivideInKoreanWons()
         {
-            MoneyCalculator
-                .Divide(4002, KRW, 4)
-                .Should()
-                .Be(1000.5d);
+            MoneyCalculator.Divide(4002, KRW, 4)
+                           .Should()
+                           .Be(1000.5d);
         }
 
         [Theory]
@@ -39,9 +38,6 @@ namespace money_problem.Tests
         {
             
         }
-
-
-        
     }
    
 }
